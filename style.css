@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none; 
+}
+
+section{
+    padding: 10px 1%;
+}
+html{
+ 
+    font-size: 20px;
+}
+
+:root{
+    ---color:#ea1ebb;
+
+}
+
+
+header{
+    background-color: #fff;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    position:fixed;
+    padding:10px 5%;
+    z-index:1000;
+    top: 0;
+    left: 0;
+    right:0;
+    box-shadow:  0px 5px 3px rgb(92, 89, 89);
+}
+
+header .logo{
+    color: rgb(85, 72, 79);
+    font-size: 30px;
+}
+
+.logo span{
+    color: var(---color);
+}
+
+.navbar a{
+color:var(---color);
+margin-left: 15px;
+text-transform: capitalize;
+cursor: pointer;
+}
+
+.icon a{
+    color: var(---color);
+    margin-left: 15px;
+    cursor: pointer;
+}
+.icon a:hover{
+    color:rgb(6, 92, 167);
+}
+
+.navbar a:hover{
+color:rgb(6, 92, 167); ;
+}
+
+header #togglar{
+    display: none;
+}
+header .fa-bars{
+    color:slategrey;
+    border:2px solid fuchsia;
+    padding:5px 8px;
+    cursor:pointer;
+    display:none;
+}
+
+/* responsive alanı menümnün */
+
+
+@media(max-width:900px){
+
+    html{
+        font-size: 25%;
+    }
+
+
+   header .fa-bars{
+        display:block;
+    }
+
+    .navbar{
+        top:100%;
+        right:0;
+        left:0;
+        background-color: #fff;
+        position:absolute;
+        border-top:.1rem solid fuchsia;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+/* not buradaki önemli kısım sonsuzluk işarti olan yer */
+    header #togglar:checked ~ .navbar{
+        clip-path:polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    
+header .navbar a{
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border: .1rem solid fuchsia;
+    display: block;
+}
+
+}
+
+
+
+/* home alanı */
+
+.home{
+    display: flex;
+    align-items: center;
+ min-height: 100vh;
+    background-image: url(depositphotos_329430110-stock-photo-a-sheet-of-bright-red.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 5%;
+}
+
+.content{
+    max-width: 50%;
+}
+
+.btn{
+    padding: 15px 20px;
+    background-color: #fff;
+    display: inline-block;
+    margin: 10px ;
+    border-radius: 5px;
+
+
+}
+
+
+
+/* video alanı */
+
+.alan{
+    margin: auto;
+}
+
+.alan .row{
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+gap: 2rem;
+padding: 2rem 20px;
+padding-bottom: 3rem;
+justify-content: space-between;
+}
+
+.video1{
+    flex: 1 1 35rem;
+    position: relative;
+  
+}
+
+
+
+.yazı{
+   flex-basis: 35rem;
+}
+
+
+@media(max-width:500px){
+
+    .video1 video{
+        width: 250px;
+    }
+
+}
+
+
+.video1 p{
+    top: 50%;
+    mix-blend-mode:screen;
+    transform:translateY(-50%);
+    background-color: #fff;
+    position:absolute;
+    text-align:center;
+    width: 100%;
+    padding:1rem 3rem;
+    font-size:2rem;
+}
